@@ -30,10 +30,12 @@ The load balancer is built in **Python using Flask**, the backend servers are si
 ### 1. **Unfamiliarity with Docker and Server Dropping**
 
 When restarting the project, old containers and networks were not cleaned up properly. This caused unexpected port conflicts and inconsistencies in container behavior. We learned that using `docker-compose down --volumes --remove-orphans` is critical when resetting a system.
+![Image](https://github.com/user-attachments/assets/67c2f0cf-0632-4f62-b784-71cbbbbd13ae)
 
 ### 2. **Route Mismatch During Testing**
 
 During testing, an attempt was made to route requests to `/test` instead of the working `/home` endpoint. However, the `/test` route wasn’t implemented across all server containers, causing 404 errors and thousands of failed requests during analysis. The decision was made to revert to using only `/home` for both functionality and load testing.
+![Image](https://github.com/user-attachments/assets/8eb5ba92-35a4-460b-a666-8ac694ac0db6)
 
 ### 3. **Severely Unbalanced Server Load**
 
@@ -92,6 +94,8 @@ cd Load_balancer
 ```bash
 docker-compose build
 ```
+![Image](https://github.com/user-attachments/assets/f1be47c8-a703-4c51-8e67-1b123dec815a)
+![Image](https://github.com/user-attachments/assets/5d86f856-bd8f-4b36-8923-5ff0a44f7b87)
 
 ### 3. **Start the system**
 
