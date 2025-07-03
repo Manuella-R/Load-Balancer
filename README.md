@@ -102,7 +102,7 @@ docker-compose build
 ```bash
 docker-compose up
 ```
-
+![Image](https://github.com/user-attachments/assets/636ae4df-bc12-44ca-adc5-674e2f9787f2)
 Leave this terminal open to show heartbeat and server logs.
 
 ### 4. **Send test request**
@@ -110,12 +110,14 @@ Leave this terminal open to show heartbeat and server logs.
 ```bash
 curl "http://localhost:5000/home?id=42"
 ```
+![Image](https://github.com/user-attachments/assets/bfbf93d5-84d1-431a-aaa0-89f8a482c561)
 
 ### 5. **View current servers**
 
 ```bash
 curl http://localhost:5000/rep
 ```
+![Image](https://github.com/user-attachments/assets/77584b77-4fb2-4071-812c-fae09848d7d0)
 
 ### 6. **Add server** (PowerShell)
 
@@ -126,7 +128,6 @@ Invoke-WebRequest -Uri http://localhost:5000/add `
   -Headers @{"Content-Type" = "application/json"} `
   -UseBasicParsing
 ```
-
 ### 7. **Remove server** (PowerShell)
 
 ```powershell
@@ -136,10 +137,10 @@ Invoke-WebRequest -Uri http://localhost:5000/rm `
   -Headers @{"Content-Type" = "application/json"} `
   -UseBasicParsing
 ```
-
+![Image](https://github.com/user-attachments/assets/89a8e4ec-60c2-47a0-95ab-3648064ee88a)
 ---
 
-## 📊 Run the Analysis Scripts
+## Run the Analysis Scripts
 
 ### Task 4-A1: 10K Requests Distribution
 
